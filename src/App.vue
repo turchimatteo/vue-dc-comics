@@ -29,6 +29,6 @@ export default {
 main {
   // TEST
   height: 100px;
-  background-color: blue;
+  background-color: rgba(0, 0, 0, 0.849);
 }
 </style>

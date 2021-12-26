@@ -3,16 +3,18 @@
         <div class="first-header"></div>
         <div class="second-header">
             <div class="container">
-                <nav>
+                <div class="wrapper">
                     <div class="logo">
                         <img src="../assets/img/dc-logo.png" alt="Logo DC">
                     </div>
-                    <ul class="menu">
-                        <li v-for="(link, index) in links" :key="index" :class="{ current: link.current }">
-                            <a :href="link.url">{{ link.text }}</a>
-                        </li>
-                    </ul>
-                </nav>
+                    <nav>
+                        <ul class="menu">
+                            <li v-for="(link, index) in links" :key="index" :class="{ current: link.current }">
+                                <a :href="link.url">{{ link.text }}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -26,20 +28,30 @@
 .second-header {
     width: 100%;
     padding: 20px;
-    height: 120px;
-    display: inline-block;
 }
-.container {
-    width: 70%;
+.wrapper {
+    height: 120px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-content: center;
 }
 .menu {
     display: flex;
-    list-style-type: none;
-    justify-content: flex-end;
-    
+    margin-top: 40px;
 }
+li {
+    margin-left: 10px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+.current {
+    color: #097ceb;
+}
+
 </style>
 
 <script>

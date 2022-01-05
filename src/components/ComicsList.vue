@@ -1,6 +1,7 @@
 <template>
     <div class="container ms_container">
         <Comic v-for="(e, index) in list" :key="index" :element = "e"/>
+        <h4>Load More</h4>
     </div>
 </template>
 <script>
@@ -93,5 +94,16 @@ export default {
 .ms_container {
     background-color: #0e0e0e;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+h4 {
+    text-transform: uppercase;
+    color: white;
+    background-color: #0282f9;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 </style>

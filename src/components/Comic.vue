@@ -2,7 +2,7 @@
     <div class="comic-container">
         <img :src="element.thumb" :alt="element.series">
         <div class="title">
-            {{ element.series.toupperCase() }}
+            {{ element.series.toUpperCase() }}
         </div>
     </div>
 </template>
@@ -16,6 +16,7 @@ export default {
 .comic-container {
     width: calc(100% / 7);
     margin: 10px;
+    background-color: #0e0e0e;
 }
 .title {
     color: white;
